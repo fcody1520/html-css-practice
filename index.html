@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order a Smoothiegram</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="container">
  <header> 
     <h1>Order a Smoothiegram</h1><p></p>
 
-    <p>There's no better way to show a loved one you care than with a Smoothiegram!</p>
+    <p class="lead">There's no better way to show a loved one you care than with a Smoothiegram!</p>
 
       <p>Each Smoothiegram comes with a custom message printed on high-quality cardstock and your choice of a premium hand-crafted smoothie.</p>
 </header>
@@ -29,15 +31,15 @@
     <tbody>
       <tr>
         <td>Super Strawberries Delicious</td>
-         <td>$1,200.00</td>
+         <td class="price">$1,200.00</td>
         </tr>
       <tr>
         <td>White Grape Ranger</td> 
-        <td>$400.00</td>
+        <td class="price">$400.00</td>
       </tr>
       <tr>
         <td>Blueberry Blast </td>
-        <td>$1,750.00</td>
+        <td class="price">$1,750.00</td>
       </tr>
     </tbody>
     </table>
@@ -45,29 +47,47 @@
   <section>
 
     <h2>Order Form</h2>
-      <form action="">
-      <label for="">Your name</label>
-
-      Who are we sending this to?
-
-      Choose a smoothie
-      Please choose an option
-      Super Strawberries Delicious
-      White Grape Ranger
-      Blueberry Blast
-
-      When should we deliver?
-      As soon as possible
-      Morning
-      Afternoon
-
-      Enter your message
-
-      Subscribe to our newsletter?
-
-      Submit
+      <form>
+        <div class="form-group">
+      <label>Your name</label>
+      <input type="text" name="sender">
+    </div>
+    <div class="form-group">
+      <label>Who are we sending this to?</label>
+        <input type="text" name="recipient">
+    </div>
+    <div class="form-group">
+      <label>Choose a smoothie</label>
+      <select name="smoothie">
+      <option value=""> Please choose an option</option>
+      <option value="super straberries delicious">Super Strawberries Delicious</option>
+      <option value="white grape ranger">White Grape Ranger</option>
+      <option value="blueberry blast">Blueberry Blast</option>
+    </select>
+  </div>
+  <div class="form-group">
+      <span>When should we deliver?</span>
+      <input type="radio" name="delivery-time" value="asap"> 
+      <label class="inline-label"> As soon as possible</label>
+      <input type="radio" name="delivery-time" value="am">
+      <label class="inline-label">Morning</label>
+      <input type="radio" name="delivery-time" value="pm">
+      <label class="inline-label">Afternoon</label>
+    </div>
+    <div class="form-group">
+     <label> Enter your message</label>
+     <textarea name="message"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="inline-label"> Subscribe to our newsletter?</label>
+      <input type="checkbox" name="subscribe" value="yes" checked>
+    </div>
+    <div class="form-group">
+      <button>Submit</button>
+    </div>
     </form>
 </section>
   </main>
-</b ody>
+</div>
+</body>
 </html>
